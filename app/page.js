@@ -19,19 +19,19 @@ const Home = async () => {
       <SeoMeta title={title} />
 
       {/* Banner */}
-      <HomeBanner banner={banner} />
+      <HomeBanner banner={banner} bgColor="bg-body" nextBgColor="bg-theme-light" />
 
       {/* Features */}
-      <HomeFeatures feature={feature} />
+      <HomeFeatures feature={feature} bgColor="bg-theme-light" nextBgColor="bg-body" />
 
       {/* services */}
-      <Services services={services} />
+      <Services services={services} bgColor="bg-body" nextBgColor="bg-theme-light" />
 
       {/* workflow */}
-      <Workflow workflow={workflow} />
+      <Workflow workflow={workflow} bgColor="bg-theme-light" showDivider={true} nextBgColor="bg-body" />
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      <Cta cta={call_to_action} bgColor="bg-body" />
     </>
   );
 };

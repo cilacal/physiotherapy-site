@@ -2,9 +2,9 @@ import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
-function Cta({ cta }) {
+function Cta({ cta, bgColor = "bg-body" }) {
   return (
-    <section className="section px-4">
+    <section className={`section px-4 ${bgColor}`}>
       <div className="section container rounded-xl shadow">
         <div className="row  mx-auto items-center justify-center">
           <div className="md:col-5 lg:col-4">

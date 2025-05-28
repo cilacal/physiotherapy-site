@@ -1,7 +1,7 @@
 ---
 banner:
-  title: Release your pain and energy
-  content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque <br/> totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus.
+  title: Tbe body speaks. My hands listen.
+  content: I create balance through movement, touch, and presence. Healing begins when the body is truly heard.
   image: /images/banner-art.svg
   button:
     label: "Contact Us"
@@ -53,17 +53,6 @@ services:
       link: /contact
   
   - title: "It’s a team of experienced and skilled people with distributions"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-    images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
-    button:
-      enable: true
-      label: Check it out
-      link: /contact
-
-  - title: "A company standing different from others"
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
     images:
       - "/images/service-slide-1.png"

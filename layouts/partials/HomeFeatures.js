@@ -1,37 +1,40 @@
 import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 
-const HomeFeatures = ({ feature }) => {
+const HomeFeatures = ({ feature, bgColor = "bg-theme-light", nextBgColor = "bg-body" }) => {
   return (
-    <section className="section bg-theme-light">
-      <div className="container">
-        <div className="text-center">
-          <h2>{markdownify(feature.title)}</h2>
-        </div>
-        <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-          {feature.features.map((item, i) => (
-            <div
-              className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
-              key={`feature-${i}`}
-            >
-              {item.icon && (
-                <Image
-                  className="mx-auto"
-                  src={item.icon}
-                  width={30}
-                  height={30}
-                  alt=""
-                />
-              )}
-              <div className="mt-4">
-                {markdownify(item.name, "h3", "h5")}
-                <p className="mt-3">{item.content}</p>
+    <>
+      <section className={`section pt-0 pb-0 ${bgColor}`}>
+        <div className="container">
+          <div className="text-center">
+            <h2>{markdownify(feature.title)}</h2>
+          </div>
+          <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+            {feature.features.map((item, i) => (
+              <div
+                className="feature-card rounded-xl bg-white p-5 pb-8 text-center"
+                key={`feature-${i}`}
+              >
+                {item.icon && (
+                  <Image
+                    className="mx-auto"
+                    src={item.icon}
+                    width={30}
+                    height={30}
+                    alt=""
+                  />
+                )}
+                <div className="mt-4">
+                  {markdownify(item.name, "h3", "h5")}
+                  <p className="mt-3">{item.content}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <div className={`h-32 -mt-16 bg-gradient-to-b from-theme-light to-body`}></div>
+    </>
   );
 };
 

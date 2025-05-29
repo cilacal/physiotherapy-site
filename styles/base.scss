@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
 html {
   @apply text-base;
 }
 
 body {
   @apply bg-body font-primary font-normal leading-relaxed text-text;
+  font-family: 'Lora', serif !important;
 }
 
 h1,
@@ -11,8 +14,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.font-display {
   @apply font-primary font-bold leading-tight text-dark;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif !important; /* Example for playful display, replace with your preferred display font */
 }
 
 h1,

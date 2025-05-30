@@ -9,7 +9,7 @@ const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light
         <div className="container">
           <div className="row items-center min-h-screen">
             <div className="lg:col-6 text-left">
-              <h1 className="font-primary font-bold text-left">{banner.title}</h1>
+              <h1 className="font-primary font-bold text-left whitespace-pre-line">{banner.title}</h1>
               <p className="mt-4 text-left">{markdownify(banner.content)}</p>
               {banner.button.enable && (
                 <Link

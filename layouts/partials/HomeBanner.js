@@ -5,12 +5,12 @@ import Link from "next/link";
 const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light" }) => {
   return (
     <>
-      <section className={`section pt-0 pb-0 ${bgColor}`}>
+      <section className={`section pt-0 pb-0 min-h-screen flex items-center ${bgColor}`}>
         <div className="container">
-          <div className="row text-center">
-            <div className="mx-auto lg:col-10">
-              <h1 className="font-primary font-bold">{banner.title}</h1>
-              <p className="mt-4">{markdownify(banner.content)}</p>
+          <div className="row items-center min-h-screen">
+            <div className="lg:col-6 text-left">
+              <h1 className="font-primary font-bold text-left">{banner.title}</h1>
+              <p className="mt-4 text-left">{markdownify(banner.content)}</p>
               {banner.button.enable && (
                 <Link
                   className="btn btn-primary mt-4"
@@ -20,8 +20,10 @@ const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light
                   {banner.button.label}
                 </Link>
               )}
+            </div>
+            <div className="lg:col-6 flex justify-end">
               <Image
-                className="mx-auto mt-12"
+                className="mt-12"
                 src={banner.image}
                 width={750}
                 height={390}

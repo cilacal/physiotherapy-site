@@ -21,15 +21,24 @@ const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light
                 </Link>
               )}
             </div>
-            <div className="lg:col-6 flex justify-end">
-              <Image
-                className="mt-12"
-                src={banner.image}
-                width={750}
-                height={390}
-                alt="banner image"
-                priority
-              />
+            <div className="lg:col-6 flex justify-end items-center relative">
+              <div className="relative w-full h-[80vh] max-h-screen flex items-center justify-end">
+                <Image
+                  className="object-contain h-full w-auto drop-shadow-xl banner-blend"
+                  src={banner.image}
+                  fill
+                  alt="banner image"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  style={{ maxHeight: '100vh' }}
+                />
+                {/* Blending overlay */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {/* Only a subtle transparent fade, no color overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent mix-blend-normal" />
+                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-transparent mix-blend-normal" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

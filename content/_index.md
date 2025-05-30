@@ -2,7 +2,7 @@
 banner:
   title: The body speaks. My hands listen.
   content: I create balance through movement, touch, and presence. Healing begins when the body is truly heard.
-  image: /images/banner-art.svg
+  image: /images/profile2.jpg
   button:
     label: "Contact Us"
     link: "/contact"

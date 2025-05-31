@@ -76,5 +76,14 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
   ],
+  safelist: [
+    'bg-body',
+    'bg-theme-light',
+    'from-body',
+    'to-theme-light',
+    'from-theme-light',
+    'to-body',
+    'bg-white',
+  ],
   // important: true,
 };

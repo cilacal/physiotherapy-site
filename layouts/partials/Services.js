@@ -15,9 +15,10 @@ const Services = ({
   return (
     <>
       {services.map((service, index) => {
-        const isOdd = index % 2 > 0;
-        const sectionBg = isOdd ? "bg-theme-light" : bgColor;
-        const nextSectionBg = !isOdd ? "bg-theme-light" : bgColor;
+        // Start with bg-theme-light, then alternate with bg-body
+        const isOdd = index % 2 === 1;
+        const sectionBg = isOdd ? "bg-body" : "bg-theme-light";
+        const nextSectionBg = !isOdd ? "bg-body" : "bg-theme-light";
         return (
           <React.Fragment key={`service-${index}`}>
             <section className={`section ${sectionBg} pb-0 mb-[-64px]`}>
@@ -84,11 +85,6 @@ const Services = ({
           </React.Fragment>
         );
       })}
-      {/* Gradient divider after all services, before workflow */}
-      <div
-        className="h-32 -mt-16 bg-gradient-to-b from-body to-theme-light w-full"
-        style={{ position: "relative", zIndex: 1 }}
-      ></div>
     </>
   );
 };

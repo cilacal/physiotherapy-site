@@ -43,7 +43,6 @@ const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light
           </div>
         </div>
       </section>
-      <div className={`h-32 -mt-16 bg-gradient-to-b from-body to-theme-light`}></div>
     </>
   );
 };

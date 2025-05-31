@@ -18,7 +18,6 @@ const Workflow = ({ workflow, bgColor = "bg-theme-light", showDivider = true, ne
         width={1920}
         height={296}
       />
-      <div className={`h-32 -mt-16 bg-gradient-to-b from-theme-light to-body`}></div>
     </section>
   );
 };

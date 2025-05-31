@@ -49,8 +49,8 @@ const Services = ({
                               sizes="(max-width: 1024px) 100vw, 50vw"
                               style={{
                                 maxHeight: '80vh',
-                                WebkitMaskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 10%, black 30%, black 70%, transparent 100%)',
-                                maskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 10%, black 30%, black 70%, transparent 100%)',
+                                WebkitMaskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
+                                maskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
                                 WebkitMaskComposite: 'multiply',
                                 maskComposite: 'intersect',
                                 WebkitMaskRepeat: 'no-repeat',

@@ -30,7 +30,17 @@ const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light
                   alt="banner image"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  style={{ maxHeight: '100vh' }}
+                  style={{
+                    maxHeight: '100vh',
+                    WebkitMaskImage: 'circle-gradient(to top, transparent 0%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
+                    maskImage: 'circle-gradient(to top, transparent 0%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
+                    WebkitMaskComposite: 'multiply',
+                    maskComposite: 'intersect',
+                    WebkitMaskRepeat: 'no-repeat',
+                    maskRepeat: 'no-repeat',
+                    WebkitMaskSize: '100% 100%',
+                    maskSize: '100% 100%',
+                  }}
                 />
                 {/* Blending overlay */}
                 <div className="absolute inset-0 pointer-events-none">

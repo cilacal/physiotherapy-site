@@ -2,7 +2,11 @@ import { markdownify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
 
-const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light" }) => {
+const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light", imageIndex = 0 }) => {
+  // Support alternating images: if banner.image is an array, pick by imageIndex, else use as is
+  const images = Array.isArray(banner.image) ? banner.image : [banner.image];
+  const currentImage = images[imageIndex % images.length];
+
   return (
     <>
       <section className={`section pt-0 pb-0 min-h-screen flex items-center ${bgColor}`}>
@@ -25,15 +29,15 @@ const HomeBanner = ({ banner, bgColor = "bg-body", nextBgColor = "bg-theme-light
               <div className="relative w-full h-[80vh] max-h-screen flex items-center justify-end">
                 <Image
                   className="object-contain h-full w-auto drop-shadow-xl banner-blend"
-                  src={banner.image}
+                  src={currentImage}
                   fill
                   alt="banner image"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   style={{
                     maxHeight: '100vh',
-                    WebkitMaskImage: 'circle-gradient(to top, transparent 0%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
-                    maskImage: 'circle-gradient(to top, transparent 0%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
+                    WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+                    maskImage: 'linear-gradient(to top, transparent 0%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                     WebkitMaskComposite: 'multiply',
                     maskComposite: 'intersect',
                     WebkitMaskRepeat: 'no-repeat',

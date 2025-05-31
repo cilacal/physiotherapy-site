@@ -40,7 +40,26 @@ const Services = ({
                       {/* Slides */}
                       {service?.images.map((slide, idx) => (
                         <SwiperSlide key={idx}>
-                          <Image src={slide} alt="" width={600} height={500} />
+                          <div className="relative w-full h-[80vh] max-h-screen flex items-center justify-end">
+                            <Image
+                              src={slide}
+                              fill
+                              alt="service image"
+                              className="object-contain h-full w-auto drop-shadow-xl service-blend"
+                              sizes="(max-width: 1024px) 100vw, 50vw"
+                              style={{
+                                maxHeight: '80vh',
+                                WebkitMaskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 10%, black 30%, black 70%, transparent 100%)',
+                                maskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 10%, black 30%, black 70%, transparent 100%)',
+                                WebkitMaskComposite: 'multiply',
+                                maskComposite: 'intersect',
+                                WebkitMaskRepeat: 'no-repeat',
+                                maskRepeat: 'no-repeat',
+                                WebkitMaskSize: '100% 100%',
+                                maskSize: '100% 100%',
+                              }}
+                            />
+                          </div>
                         </SwiperSlide>
                       ))}
                     </Swiper>

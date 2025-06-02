@@ -51,6 +51,7 @@ module.exports = {
         body: theme.colors.default.theme_color.body,
         border: theme.colors.default.theme_color.border,
         header: theme.colors.default.theme_color.header,
+        button: theme.colors.default.theme_color.button,
         "theme-light": theme.colors.default.theme_color.theme_light,
       },
       fontSize: {

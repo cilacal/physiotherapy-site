@@ -79,7 +79,7 @@ const Services = ({
                     {service.button.enable && (
                       <Link
                         href={service?.button.link}
-                        className="cta-link inline-flex items-center text-primary"
+                        className="cta-link inline-flex items-center text-button"
                       >
                         {service?.button.label}
                         <Image

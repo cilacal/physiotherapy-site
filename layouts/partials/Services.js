@@ -24,47 +24,51 @@ const Services = ({
             <section className={`section ${sectionBg} pb-0 mb-[-64px]`}>
               <div className="container pt-12">
                 <div className="items-center gap-8 md:grid md:grid-cols-2">
-                  {/* Carousel */}
                   <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
-                    <Swiper
-                      modules={[Autoplay, Pagination]}
-                      pagination={
-                        service.images.length > 1 ? { clickable: true } : false
-                      }
-                      autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                      }}
-                      init={service?.images > 1 ? false : true}
-                    >
-                      {/* Slides */}
-                      {service?.images.map((slide, idx) => (
-                        <SwiperSlide key={idx}>
-                          <div className="relative w-full h-[80vh] max-h-screen flex items-center justify-end">
-                            <Image
-                              src={slide}
-                              fill
-                              alt="service image"
-                              className="object-contain h-full w-auto drop-shadow-xl service-blend"
-                              sizes="(max-width: 1024px) 100vw, 50vw"
-                              style={{
-                                maxHeight: '80vh',
-                                WebkitMaskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
-                                maskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
-                                WebkitMaskComposite: 'multiply',
-                                maskComposite: 'intersect',
-                                WebkitMaskRepeat: 'no-repeat',
-                                maskRepeat: 'no-repeat',
-                                WebkitMaskSize: '100% 100%',
-                                maskSize: '100% 100%',
-                              }}
-                            />
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
+                    <div className="relative">
+                      <Swiper
+                        modules={[Autoplay, Pagination]}
+                        autoplay={{
+                          delay: 5000,
+                          disableOnInteraction: false,
+                        }}
+                        pagination={{
+                          clickable: true,
+                          el: `.swiper-pagination-${index}`,
+                          bulletClass: 'swiper-pagination-bullet',
+                          bulletActiveClass: 'swiper-pagination-bullet-active',
+                        }}
+                      >
+                        {/* Slides */}
+                        {service?.images.map((slide, idx) => (
+                          <SwiperSlide key={idx}>
+                            <div className="relative w-full h-[80vh] max-h-screen flex items-center justify-end">
+                              <Image
+                                src={slide}
+                                fill
+                                alt="service image"
+                                className="object-contain h-full w-auto drop-shadow-xl service-blend"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                style={{
+                                  maxHeight: '80vh',
+                                  WebkitMaskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
+                                  maskImage: 'linear-gradient(to top, transparent 15%, black 30%, black 85%, transparent 100%), linear-gradient(to right, transparent 15%, black 30%, black 70%, transparent 85%)',
+                                  WebkitMaskComposite: 'multiply',
+                                  maskComposite: 'intersect',
+                                  WebkitMaskRepeat: 'no-repeat',
+                                  maskRepeat: 'no-repeat',
+                                  WebkitMaskSize: '100% 100%',
+                                  maskSize: '100% 100%',
+                                }}
+                              />
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                      {/* Pagination bullets container */}
+                      <div className={`swiper-pagination swiper-pagination-${index}`} style={{ position: 'absolute', bottom: 16, left: 0, right: 0, zIndex: 10 }} />
+                    </div>
                   </div>
-                  {/* Content */}
                   <div
                     className={`service-content mt-5 md:mt-0 ${
                       !isOdd && "md:order-1"

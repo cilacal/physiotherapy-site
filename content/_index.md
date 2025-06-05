@@ -66,6 +66,6 @@ call_to_action:
   image: '/images/cta.svg'
   button:
     enable: true
-    label: "Contact Us"
+    label: "Contact Me"
     link: "/contact"
 ---

@@ -1,5 +1,7 @@
+"use client";
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
+import BookingForm from "./partials/BookingForm";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
@@ -68,6 +70,7 @@ const Contact = ({ data }) => {
             </ul>
           </div>
         </div>
+        <BookingForm />
       </div>
     </section>
   );

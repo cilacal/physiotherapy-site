@@ -18,8 +18,8 @@ services:
       - "/images/profile2.png"
     button:
       enable: true
-      label: See my curriculum vitae
-      link: /contact
+      label: Click here to find out more about me
+      link: /About me
 
   - title: "It is a privately owned Information and cyber security company"
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."

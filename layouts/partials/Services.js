@@ -78,7 +78,7 @@ const Services = ({
                     <p className="mb-2 mt-4">{service?.content}</p>
                     {service.button.enable && (
                       <Link
-                        href={service?.button.link}
+                        href={service?.button.label === "Click here to find out more about me" ? "/about-me" : service?.button.link}
                         className="cta-link inline-flex items-center text-button"
                       >
                         {service?.button.label}
